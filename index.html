@@ -367,6 +367,60 @@
   }
   .btn-download:hover { border-color: var(--pink); color: var(--pink); }
   .btn-download svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+  /* ── Prevent horizontal overflow ── */
+  html, body { overflow-x: hidden; }
+
+  /* ── Tablet ── */
+  @media (max-width: 900px) {
+    .page { padding: 0 28px 80px; }
+
+    .section { margin-bottom: 64px; }
+    .section-title { font-size: 32px; margin-bottom: 36px; }
+
+    .component-grid { grid-template-columns: 1fr 1fr; }
+
+    .type-row {
+      grid-template-columns: 160px 1fr 100px;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    .page { padding: 0 20px 60px; }
+
+    .cover { padding: 40px 20px; }
+    .cover-meta { flex-wrap: wrap; gap: 20px 32px; }
+
+    .section { margin-bottom: 52px; }
+    .section-title { font-size: 26px; margin-bottom: 28px; }
+
+    .color-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+    .type-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+      padding: 14px 16px;
+    }
+    .type-specs { text-align: left; }
+    .type-divider { margin: 4px 0; }
+
+    .component-grid { grid-template-columns: 1fr; }
+
+    .voice-grid { grid-template-columns: 1fr; }
+
+    .style-footer { flex-direction: column; gap: 8px; text-align: center; margin-top: 60px; }
+  }
+
+  /* ── Small mobile ── */
+  @media (max-width: 400px) {
+    .page { padding: 0 16px 48px; }
+    .cover { padding: 32px 16px; }
+    .section-title { font-size: 22px; }
+    .color-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 </head>
 <body>
